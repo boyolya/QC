@@ -158,5 +158,5 @@ fabric.properties
 # Editor-based Rest Client
 .idea/httpRequests
 
-/secure.py
+/quality_center/secure.py
 /test-.py

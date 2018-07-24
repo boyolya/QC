@@ -35,7 +35,6 @@ class Qc:
 
     def login(self):
 
-
         authenticationStatus = self.isAuthenticated()
         if authenticationStatus is True:
             return True
@@ -46,7 +45,7 @@ class Qc:
         }
 
         answer = self.session.post('https://login.software.microfocus.com/msg/actions/doLogin.action', headers=headers,
-                            data={'username': self.username, 'password': self.password})
+                                   data={'username': self.username, 'password': self.password})
 
         if answer.status_code == requests.codes.ok:
             if 'LWSSO_COOKIE_KEY' in answer.cookies.get_dict():
