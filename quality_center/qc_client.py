@@ -1,6 +1,5 @@
 """QC client module"""
-import os
-import sys
+
 import json
 import re
 import requests
@@ -10,16 +9,8 @@ import utils
 import qc_exceptions
 import quality_center_utils
 
-
-# check QA environment
-# from framework_constants import Framework
-# qaenv = os.environ.get('QAENV', Framework.CODEBASE)
-# sys.path.append(qaenv + '/modules/')
-
-
 class QcClient(object):
     """Class object of QcClient"""
-   # url = "https://almalmqc1250saastrial.saas.hpe.com/qcbin"
 
     def __init__(self, username, password):
         """Initiate a REST session to Quality Center server
@@ -30,11 +21,8 @@ class QcClient(object):
         """
         self.username = username
         self.password = password
-        # self.domain = domain
         self.domain = "DEFAULT_350860509"
-        # self.baseUrl = "https://almalmqc1250saastrial.saas.hpe.com/qcbin"
         self.baseUrl = "https://almalmqc1250saastrial.saas.hpe.com/qcbin/"
-        # self.project = project
         self.project = "350860509_DEMO"
         self.url = '{0}rest/domains/{1}/projects/{2}/'.format(self.baseUrl, self.domain, self.project)
         self.session = requests.session()
