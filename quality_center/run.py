@@ -74,7 +74,6 @@ class Run(BaseEntity):
 
     def __init__(self):
         """Init for Run class
-
         :return: self
         """
         super(Run, self).__init__()

@@ -21,9 +21,9 @@ class QcClient(object):
         """
         self.username = username
         self.password = password
-        self.domain = "DEFAULT_350860509"
+        self.domain = "DEFAULT_267798612"
         self.baseUrl = "https://almalmqc1250saastrial.saas.hpe.com/qcbin/"
-        self.project = "350860509_DEMO"
+        self.project = "267798612_DEMO"
         self.url = '{0}rest/domains/{1}/projects/{2}/'.format(self.baseUrl, self.domain, self.project)
         self.session = requests.session()
         self.session.headers.update({'Accept': 'application/xml'})
